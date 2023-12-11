@@ -11,13 +11,13 @@ namespace DAL
     {
         public PizzaDbContext(DbContextOptions<PizzaDbContext> options) : base(options)
         {
-            Database.EnsureDeleted();
+            //Database.EnsureDeleted();
             Database.EnsureCreated();
         }
 
         public PizzaDbContext()
         {
-            Database.EnsureDeleted();
+            //Database.EnsureDeleted();
             Database.EnsureCreated();
         }
 
@@ -36,10 +36,10 @@ namespace DAL
             Manufacturer m1 = new Manufacturer { Id = 1, Name = "M1", Country = "UA" };
             Manufacturer m2 = new Manufacturer { Id = 2, Name = "M2", Country = "PL" };
 
-            Pizza pizza1 = new Pizza { Id = 1, Name = "jddddddddddd", Price = 78, ManufacturerId = m1.Id };
-            Pizza pizza2 = new Pizza { Id = 2, Name = "jdkddjfdiyyyyyyyyy", Price = 33, ManufacturerId = m1.Id };
-            Pizza pizza3 = new Pizza { Id = 3, Name = "jdjdggghhjjfkfkff", Price = 67, ManufacturerId = m2.Id };
-            Pizza pizza4 = new Pizza { Id = 4, Name = "ssssssss", Price = 88, ManufacturerId = m2.Id };
+            Pizza pizza1 = new Pizza { Id = 1, Name = "AAAAAAAAAAA", Price = 78, ManufacturerId = m1.Id };
+            Pizza pizza2 = new Pizza { Id = 2, Name = "BBBBBBBBBBBBBBB", Price = 33, ManufacturerId = m1.Id };
+            Pizza pizza3 = new Pizza { Id = 3, Name = "CCCCCCCCCCCCC", Price = 67, ManufacturerId = m2.Id };
+            Pizza pizza4 = new Pizza { Id = 4, Name = "DDDDDDDDDDDDDDD", Price = 88, ManufacturerId = m2.Id };
 
             
 

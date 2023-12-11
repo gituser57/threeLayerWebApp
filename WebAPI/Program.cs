@@ -26,7 +26,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-//    app.UseExceptionHandler("/Error");
+   // app.UseExceptionHandler("/Error");
 }
 
 
@@ -42,11 +42,7 @@ app.Map("/error", app => app.Run(async context =>
     await context.Response.WriteAsync("Error 500 occurred!");
 }));
 
-app.Map("/er", app => app.Run(async context =>
-{
-    context.Response.StatusCode = 500;
-    await context.Response.WriteAsync("Error 500 occurred!");
-}));
+
 
 app.Map("/results/{id}", SendResults);
 
@@ -78,28 +74,6 @@ IResult SendResults(int id)
 }
 
 
-//app.Map("/GetResult/{id}", app => app.Run(async context => 
-//     =>
-
-// public IResult GetResult(string name, string surname, int n)
-//{
-//    if (n == 1)
-//        return Results.Text($"{name} {surname}");
-//    if (n == 2)
-//        return Results.Json(new { Name = name, Surname = surname });
-//    if (n == 3)
-//        return Results.Ok($"{name} {surname}");
-//    if (n == 4)
-//        return Results.Ok(new { Name = name, Surname = surname });
-//    if (n == 5)
-//        return Results.LocalRedirect("/error");
-//    if (n == 6)
-//        return Results.BadRequest("Bad request!");
-//    if (n == 7)
-//        Results.NotFound(new { message = "Resource Not Found" });
-
-//    return Results.StatusCode(500);
-//}
 
 app.UseHttpsRedirection();
 app.UseAuthorization();

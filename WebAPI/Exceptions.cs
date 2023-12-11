@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI
 {
+    // https://learn.microsoft.com/en-us/aspnet/core/web-api/handle-errors?view=aspnetcore-8.0&source=recommendations
     public class HttpResponseException : Exception
     {
         public HttpResponseException(int statusCode, object? value = null) =>

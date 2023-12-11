@@ -32,7 +32,9 @@ Migrations Overview (Instruction for task DAL on Autocode)
 
 
 Preparation
-To get started, you need to create an empty ApplicationDbContext constructor. Each DbContext instance must be configured to use one and only one database provider. So you need to add the following lines of code:
+To get started, you need to create an empty ApplicationDbContext constructor. 
+Each DbContext instance must be configured to use one and only one database provider. 
+So you need to add the following lines of code:
 
 public ApplicationDbContext()
 {
